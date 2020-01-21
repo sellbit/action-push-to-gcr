@@ -33,6 +33,12 @@ Service key to use for GCR authentication
 
 Project id. Used in combination with GCR endpoint to build full docker image.
 
+## Optional Environment Variables
+
+### `DOCKER_BUILD_ARGS`
+
+Additional build args.
+
 ## Example usage
 
 ```ylm
@@ -44,4 +50,5 @@ with:
   env:
     GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
     GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
+    DOCKER_BUILD_ARGS: "--no-cache --build-arg TOKEN=secret"
 ```
