@@ -6,3 +6,4 @@ echo $GCLOUD_SERVICE_KEY | base64 -d | docker login -u _json_key --password-stdi
 docker build -t $IMAGE_NAME:$INPUT_IMAGE_TAG $DOCKER_BUILD_ARGS .
 docker tag $IMAGE_NAME:$INPUT_IMAGE_TAG $IMAGE_NAME:latest
 docker push $IMAGE_NAME:$INPUT_IMAGE_TAG
+docker push $IMAGE_NAME:latest
